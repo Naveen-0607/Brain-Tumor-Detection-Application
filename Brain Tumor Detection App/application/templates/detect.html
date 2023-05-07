@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Brain Tumor Detection App - Detect</title>
+	<style>
+		body{
+			background-color: rgb(224, 224, 224);
+			justify-content: center;
+			text-align: center;
+			padding: 150px;
+		}
+		.button{
+			background-color: rgb(255, 216, 175);
+			font-size: 18px;
+    border-radius: 15px;
+    height: 50px;
+    padding: 14px;
+    margin: 14px;
+		}
+	</style>	
+</head>
+<body>
+	<h1>Brain Tumor Detection</h1>
+	<p>Select an MRI image to detect if there is a brain tumor:</p>
+	<form action="{{ url_for('detect') }}" method="post" enctype="multipart/form-data">
+		<input type="file" name="file" accept="image/*" required>
+		<button class="button" type="submit">Detect</button>
+	</form>
+</body>
+</html>

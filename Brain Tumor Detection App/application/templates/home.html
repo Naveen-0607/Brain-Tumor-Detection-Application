@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Brain Tumor Detection App</title>
+	<style>
+		body{
+			background-color: rgb(224, 224, 224);
+			justify-content: center;
+			text-align: center;
+			padding: 150px;
+		}
+		.button{
+			background-color: rgb(255, 132, 0);
+			font-size: 18px;
+    border-radius: 15px;
+    height: 50px;
+    padding: 14px;
+    margin: 14px;
+		}
+
+		.button :hover{
+			background-color: rgb(255, 216, 175);
+		}
+	</style>
+	<link href=""></link>
+</head>
+<body>
+	<h1>Welcome to the Brain Tumor Detection App</h1>
+	<p>This app uses machine learning to detect brain tumors from MRI images.</p>
+	<p>Click the button below to detect a brain tumor:</p>
+	<form action="{{ url_for('detect') }}" method="get">
+		<button class="button" type="submit">Detect Brain Tumor</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			background-color: rgb(224, 224, 224);
+			justify-content: center;
+			text-align: center;
+			padding: 150px;
+		}
+		.button{
+			background-color: rgb(255, 216, 175);
+			font-size: 18px;
+    border-radius: 15px;
+    height: 50px;
+    padding: 14px;
+    margin: 14px;
+		}
+	</style>
+	<title>Brain Tumor Detection App</title>
+</head>
+<body>
+    <p>{{result}}</p>
+    <p>{{prediction}}</p>
+    <p style="text-align: center; font-size: 30px;">{{res}}</p>
+	<form action="{{ url_for('detect') }}" method="get">
+	<button class="button" type="submit">Detect Brain Tumor</button>
+	</form>
+</body>
+</html>
